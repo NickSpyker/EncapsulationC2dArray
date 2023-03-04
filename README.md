@@ -1,2 +1,2 @@
-# Encapsulation2dArray
-#CODE Gestion des doubles tableaux en C avec une lib
+# Encapsulation C 2d Array
+## #CODE - Gestion des doubles tableaux en C avec une lib

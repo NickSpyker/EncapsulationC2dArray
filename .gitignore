@@ -35,12 +35,16 @@
 *.i*86
 *.x86_64
 *.hex
+unit_test
+test_2d_array_handler
 
 # Debug files
 *.dSYM/
 *.su
 *.idb
 *.pdb
+*.vscode
+*.idea
 
 # Kernel Module Compile Results
 *.mod*
