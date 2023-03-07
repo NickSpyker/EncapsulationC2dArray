@@ -1,19 +1,21 @@
 ##
 ## EPITECH PROJECT, 2022
-## 2D Array Handler
+## Array 2d Handler
 ## File description:
 ## Makefile
 ##
 
-CFLAGS = -W -Wall -Werror -Wextra
+CFLAGS = -W -Wall -Wextra
 
-CPPFLAGS = -Iinclude
+SRC	=	arr2d.c \
+		getter.c \
+		result.c \
+		setter.c \
+		tools.c
 
-SRC	= $(wildcard *.c)
+OBJ =	$(SRC:.c=.o)
 
-OBJ = $(SRC:.c=.o)
-
-LIB	= lib2darrhandl.a
+LIB	= 	libarr2d.a
 
 .PHONY: all $(LIB) tests_run clean fclean re
 

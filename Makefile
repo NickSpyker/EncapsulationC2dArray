@@ -1,6 +1,6 @@
 ##
 ## EPITECH PROJECT, 2022
-## 2D Array Handler
+## Array 2d Handler
 ## File description:
 ## Makefile
 ##
@@ -15,27 +15,27 @@ SRC = main.c
 
 OBJ = $(SRC:.c=.o)
 
-NAME = test_2d_array_handler
+NAME = test_arr2d
 
 .PHONY: all $(NAME) tests_run clean fclean re
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	make -C lib/2d_array_handler
-	$(CC) $(OBJ) -o $(NAME) -Llib -l2darrhandl
+	make -C lib/array_2d_handler
+	$(CC) $(OBJ) -o $(NAME) -Llib -larr2d
 
 tests_run: fclean
-	make -C lib/2d_array_handler
-	$(CC) $(TESTS) -o unit_test -Llib -l2darrhandl --coverage -lcriterion
+	make -C lib/array_2d_handler
+	$(CC) $(TESTS) -o unit_test -lcriterion -Llib -larr2d
 	./unit_test
 
 clean:
-	make clean -C lib/2d_array_handler
+	make clean -C lib/array_2d_handler
 	$(RM) $(OBJ) *.gcno *.gcda
 
 fclean: clean
-	make fclean -C lib/2d_array_handler
-	$(RM) $(NAME) unit_test $(shell find ./ -type f -name "*.a")
+	make fclean -C lib/array_2d_handler
+	$(RM) $(NAME) unit_test
 
 re: fclean all
