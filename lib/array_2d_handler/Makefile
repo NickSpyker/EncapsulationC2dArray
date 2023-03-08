@@ -5,9 +5,10 @@
 ## Makefile
 ##
 
-CFLAGS = -W -Wall -Wextra
+CFLAGS = -W -Wall -Werror -Wextra -fPIC
 
 SRC	=	arr2d.c \
+		extractor.c \
 		getter.c \
 		result.c \
 		setter.c \
@@ -17,13 +18,12 @@ OBJ =	$(SRC:.c=.o)
 
 LIB	= 	libarr2d.a
 
-.PHONY: all $(LIB) tests_run clean fclean re
+.PHONY: all $(LIB) clean fclean
 
 all: $(LIB)
 
 $(LIB): $(OBJ)
-	$(CC) -c $(OBJ)
-	ar src $(LIB) $(OBJ)
+	$(CC) -shared -o $(LIB) $(OBJ)
 	cp $(LIB) ..
 
 clean:

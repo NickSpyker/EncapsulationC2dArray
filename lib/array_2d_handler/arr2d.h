@@ -24,6 +24,7 @@ result_t err(char *error);
 typedef struct {
     unsigned int nb_rows;
     unsigned int nb_cols;
+    unsigned int size;
     int *data;
 } arr2d_t;
 
@@ -36,13 +37,20 @@ result_t arr2d_get(arr2d_t *array, unsigned int row, unsigned int col);
 result_t arr2d_get_above(arr2d_t *array, unsigned int row, unsigned int col);
 result_t arr2d_get_below(arr2d_t *array, unsigned int row, unsigned int col);
 result_t arr2d_get_right(arr2d_t *array, unsigned int row, unsigned int col);
-result_t arr2d_get_left(arr2d_t *array,  unsigned int row, unsigned int col);
+result_t arr2d_get_left(arr2d_t *array, unsigned int row, unsigned int col);
+
+// Extractors
+int **arr2d_extract_row(arr2d_t *array, unsigned int row);
+int **arr2d_extract_col(arr2d_t *array, unsigned int col);
+void arr2d_delete_excerpt(int **excerpt);
 
 // Setter
 int arr2d_set(arr2d_t *array, unsigned int row, unsigned int col, int value);
 
 // Tools
 int arr2d_exists(arr2d_t *array, unsigned int row, unsigned int col);
+int arr2d_row_exists(arr2d_t *array, unsigned int row);
+int arr2d_col_exists(arr2d_t *array, unsigned int col);
 void arr2d_display_ints(arr2d_t *array);
 void arr2d_display_chars(arr2d_t *array);
 
