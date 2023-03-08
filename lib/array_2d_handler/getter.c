@@ -9,31 +9,34 @@
 
 result_t arr2d_get(arr2d_t *array, unsigned int row, unsigned int col)
 {
-    if (arr2d_exists(array, row, col))
-        return make_ok(&array->data[row * array->nb_cols + col]);
-    return make_err("Error: Index out of bounds\n");
+    // Vérifier si l'indice de ligne et l'indice de colonne sont valides.
+        // Retourner un résultat contenant le pointeur vers la valeur de la case du tableau.
+
+    // Sinon, retourner un résultat d'erreur.
 }
 
 result_t arr2d_get_above(arr2d_t *array, unsigned int row, unsigned int col)
 {
-    if (0 < row)
-        return arr2d_get(array, row - 1, col);
-    return make_err("Error: Index out of bounds\n");
+    // Vérifier si l'indice de ligne est valide pour obtenir la case au-dessus de celle spécifiée.
+        // Obtenir le résultat de la case au-dessus de celle spécifiée en utilisant la fonction arr2d_get.
+
+    // Sinon, retourner un résultat d'erreur.
 }
 
 result_t arr2d_get_below(arr2d_t *array, unsigned int row, unsigned int col)
 {
-    return arr2d_get(array, row + 1, col);
+    // Obtenir le résultat de la case en dessous de celle spécifiée en utilisant la fonction arr2d_get.
 }
 
 result_t arr2d_get_right(arr2d_t *array, unsigned int row, unsigned int col)
 {
-    return arr2d_get(array, row, col + 1);
+    // Obtenir le résultat de la case à droite de celle spécifiée en utilisant la fonction arr2d_get.
 }
 
 result_t arr2d_get_left(arr2d_t *array,  unsigned int row, unsigned int col)
 {
-    if (0 < col)
-        return arr2d_get(array, row, col - 1);
-    return make_err("Error: Index out of bounds\n");
+    // Vérifier si l'indice de colonne est valide pour obtenir la case à gauche de celle spécifiée.
+        // Obtenir le résultat de la case à gauche de celle spécifiée en utilisant la fonction arr2d_get.
+
+    // Sinon, retourner un résultat d'erreur.
 }
