@@ -18,8 +18,8 @@ typedef struct {
 } result_t;
 
 // Result handlers
-result_t ok(int *value);
-result_t err(char *error);
+result_t make_ok(int *value);
+result_t make_err(char *error);
 
 typedef struct {
     unsigned int nb_rows;

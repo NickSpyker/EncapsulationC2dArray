@@ -7,12 +7,16 @@
 
 #include "arr2d.h"
 
-result_t ok(int *value)
+result_t make_ok(int *value)
 {
-    return (result_t) {1, 0, value, NULL};
+    result_t result = {1, 0, value, NULL};
+
+    return result;
 }
 
-result_t err(char *error)
+result_t make_err(char *error)
 {
-    return (result_t) {0, 1, NULL, error};
+    result_t result = {1, 0, NULL, error};
+
+    return result;
 }
