@@ -5,11 +5,13 @@
 ## Makefile
 ##
 
-CFLAGS		= -W -Wall -Werror -Wextra
-CPPFLAGS	= -Iinclude
+CFLAGS = -W -Wall -Werror -Wextra
+
+CPPFLAGS = -Iinclude
+
+SRC = main.c
 
 OBJ = $(SRC:.c=.o)
-SRC = main.c
 
 NAME = test_arr2d
 
