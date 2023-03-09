@@ -9,31 +9,31 @@
 
 int **arr2d_extract_row(arr2d_t *array, unsigned int row)
 {
-    int **excerpt = NULL;
+    // Vérifier si l'indice de ligne est valide.
 
-    if (array->nb_rows <= row)
-        return NULL;
-    excerpt = malloc(sizeof(int *) * (array->nb_cols + 1));
-    for (unsigned int i = 0; i < array->nb_cols; i++)
-        excerpt[i] = arr2d_get(array, row, i).value;
-    excerpt[array->nb_cols] = NULL;
-    return excerpt;
+    // Allouer de la mémoire pour stocker l'extrait de la ligne du tableau.
+
+    // Copier les éléments de la ligne spécifiée dans l'extrait.
+
+    // Mettre un pointeur NULL à la fin de l'extrait pour indiquer la fin du tableau.
+
+    // Retourner l'extrait de la ligne.
 }
 
 int **arr2d_extract_col(arr2d_t *array, unsigned int col)
 {
-    int **excerpt = NULL;
+    // Vérifier si l'indice de ligne est valide.
 
-    if (array->nb_cols <= col)
-        return NULL;
-    excerpt = malloc(sizeof(int *) * (array->nb_rows + 1));
-    for (unsigned int i = 0; i < array->nb_rows; i++)
-        excerpt[i] = arr2d_get(array, i, col).value;
-    excerpt[array->nb_rows] = NULL;
-    return excerpt;
+    // Allouer de la mémoire pour stocker l'extrait de la colonne du tableau.
+
+    // Copier les éléments de la ligne spécifiée dans l'extrait.
+
+    // Mettre un pointeur NULL à la fin de l'extrait pour indiquer la fin du tableau.
+
+    // Retourner l'extrait de la ligne.
 }
 
 void arr2d_delete_excerpt(int **excerpt)
 {
-    free(excerpt);
+    // Libérer la mémoire allouée pour l'extrait.
 }

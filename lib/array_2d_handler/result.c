@@ -9,14 +9,20 @@
 
 result_t make_ok(int *value)
 {
-    result_t result = {1, 0, value, NULL};
+    // Initialiser un objet result_t pour représenter un résultat OK.
+    // Initialiser is_ok et is_err.
+    // Le membre value est initialisé avec le pointeur vers la valeur à retourner.
+    // Le membre error est initialisé à NULL car il n'y a pas d'erreur à signaler.
 
-    return result;
+    // Retourner l'objet result_t nouvellement créé.
 }
 
 result_t make_err(char *error)
 {
-    result_t result = {1, 0, NULL, error};
+    // Initialiser un objet result_t pour représenter un résultat d'erreur.
+    // Initialiser is_ok et is_err.
+    // Le membre value est initialisé à NULL car il n'y a pas de valeur à retourner.
+    // Le membre error est initialisé avec la chaîne de caractères d'erreur spécifiée.
 
-    return result;
+    // Retourner l'objet result_t nouvellement créé.
 }
